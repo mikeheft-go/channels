@@ -23,11 +23,11 @@ func main() {
 }
 
 func getStatus(link string) {
-	resp, err := http.Get(link)
+	_, err := http.Get(link)
 	if err != nil {
 		fmt.Println("[ERROR]: ", err)
 		os.Exit(1)
 	}
 
-	fmt.Println(resp.StatusCode)
+	fmt.Println(link, "is up!")
 }
